@@ -4,8 +4,8 @@
 
 int getMaxWord(char buf[], char word[])
 {
-	int cletter = 0; //количество букв в слове
-	char* pword = 0; //указатель на первый символ текущего слова
+	int cletter = 0; 
+	char* pword = 0; 
 	int inWord = 0;
 	char* pmax = 0;
 	int cmax = 0;
@@ -15,11 +15,11 @@ int getMaxWord(char buf[], char word[])
 	{
 		if (buf[i] != ' ' && inWord == 0)
 		{
-			pword = buf + i; //указатель на первый символ слова
+			pword = buf + i; 
 			inWord = 1;
 			cletter++;
 		}
-		else if (buf[i] != ' ' && inWord == 1) //условие, что мы в слове
+		else if (buf[i] != ' ' && inWord == 1) 
 			cletter++;
 		else if (buf[i] == ' ' && inWord == 1)
 		{
@@ -35,7 +35,7 @@ int getMaxWord(char buf[], char word[])
 		i++;
 	}
 
-	if (pmax == NULL)
+	if (inWord)
 	{
 		cmax = cletter;
 		pmax = pword;
