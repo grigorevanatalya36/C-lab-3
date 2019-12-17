@@ -1,6 +1,6 @@
 #include "task3.h"
 #include <stdio.h>
-#include <string>
+#include <string.h>
 
 int inword(int flag, char ch)
 {
