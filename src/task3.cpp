@@ -31,25 +31,16 @@ int getMaxWord(char buf[], char word[])
 		}
 		i++;
 	}
-	if (max != 0)
-	{
-		while (*p != ' ' && *p != '\0' && *p != '\n')
-		{
-			word[a] = *p;
-			*p++;
-			a++;
-		}
-	}
-	else if (max == 0 && inword == 1)
+	if (inword == 1 && max < count)
 	{
 		max = count;
-		p = &buf[strlen(buf) - count];
-		while (*p != ' ' && *p != '\0' && *p != '\n')
-		{
-			word[a] = *p;
-			*p++;
-			a++;
-		}
+		p = &buf[i - count];
+	}
+	while (*p != ' ' && *p != '\0' && *p != '\n')
+	{
+		word[a] = *p;
+		*p++;
+		a++;
 	}
 	return max;
 }
