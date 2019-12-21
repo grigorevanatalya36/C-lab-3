@@ -10,7 +10,7 @@ int main() {
     int swap = 0;
     char swapChar = 0;
 
-    for (int i = 0; i < 128; i++) {
+    for (int i = 0; i < 127; i++) {
         countSymbols[i] = 0;
     }
 
@@ -28,9 +28,9 @@ int main() {
     }
 
 
-        for (int currentIndex = 0; currentIndex < 128 - 1; currentIndex++) {
+        for (int currentIndex = 0; currentIndex < 127 - 1; currentIndex++) {
                 maxValue = countSymbols[currentIndex];
-                for (int j = currentIndex + 1; j < 128; j++) {
+                for (int j = currentIndex + 1; j < 127; j++) {
                     if (countSymbols[j] > maxValue) {
                         maxValue = countSymbols[j];
 
