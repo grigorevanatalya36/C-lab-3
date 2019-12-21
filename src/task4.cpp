@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int number(char ch0)
+int digit(char ch0)
 {
     if (ch0 >= '0' && ch0 <= '9')
         return 1;
@@ -12,11 +12,11 @@ int number(char ch0)
 
 int in_number(int flag, char ch)
 {
-    if (flag == 0 && number(ch) == 1) //enter in number
+    if (flag == 0 && digit(ch) == 1) //enter in number
         return 1;
-    else if (flag == 1 && number(ch) == 1) //in number
+    else if (flag == 1 && digit(ch) == 1) //in number
         return 2;
-    else if (flag == 1 && number(ch) == 0) //exit 
+    else if (flag == 1 && digit(ch) == 0) //exit 
         return 3;
 }
 
@@ -62,7 +62,7 @@ int getSum(char buf[])
                
             break;
         }
-         printf("%с %d\n",buf[i],sum);
+         printf("%d %d\n",buf[i],number);
         i++;
     }
     
