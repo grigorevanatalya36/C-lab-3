@@ -41,7 +41,6 @@ int getSum(char buf[])
             number = char_in_int(buf[i]);
             flag = 1;
             count++;
-             
             break;
         case 2:
             number = number * 10 + char_in_int(buf[i]);
@@ -53,14 +52,14 @@ int getSum(char buf[])
                 sum +=number;
                 number = 0;
             }
-                
             break;
         case 3:
             sum += number;
             number = 0;
             flag = 0;
-               
             break;
+        default:
+            number=0;
         }
          printf("%d %d\n",buf[i],number);
         i++;
