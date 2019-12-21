@@ -59,6 +59,9 @@ int getSum(char buf[])
             number = 0;
             flag = 0;
             break;
+        default:
+            number=0;
+                
         }
         i++;
     }
