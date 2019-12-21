@@ -61,7 +61,7 @@ int getSum(char buf[])
         default:
             number=0;
         }
-         printf("%d %d\n",buf[i],number);
+         printf("%c %d %d %d %d\n",buf[i], flag, in_number(flag, buf[i]), number, sum);
         i++;
     }
     
