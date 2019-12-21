@@ -18,6 +18,8 @@ int in_number(int flag, char ch)
         return 2;
     else if (flag == 1 && digit(ch) == 0) //exit 
         return 3;
+    else 
+        return 4;
 }
 
 int char_in_int(char ch1)
