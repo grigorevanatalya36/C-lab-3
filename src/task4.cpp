@@ -59,7 +59,7 @@ int getSum(char buf[])
         }
         i++;
     }
-    if (i == strlen(buf))
+    if (flag==1 && i == strlen(buf))
         sum += number;
     
     return sum;
