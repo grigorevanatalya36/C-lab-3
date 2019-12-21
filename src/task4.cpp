@@ -29,7 +29,6 @@ int char_in_int(char ch1)
 
 int getSum(char buf[])
 {
-    
     if (buf[strlen(buf) - 1] == '\n')
         buf[strlen(buf) - 1] = '\0';
     
@@ -60,16 +59,12 @@ int getSum(char buf[])
             number = 0;
             flag = 0;
             break;
-        default:
-            number=0;
         }
-         printf("%c %d %d %d %d\n",buf[i], flag, in_number(flag, buf[i]), number, sum);
         i++;
     }
     
     if (flag==1)
         sum += number;
-    
     
     return sum;
 }
