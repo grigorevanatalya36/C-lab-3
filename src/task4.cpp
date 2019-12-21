@@ -27,15 +27,12 @@ int char_in_int(char ch1)
 
 int getSum(char buf[])
 {
-    printf("1- %s\n",buf);
-    printf("1- %d\n",strlen(buf));
     
     if (buf[strlen(buf) - 1] == '\n')
         buf[strlen(buf) - 1] = '\0';
-    printf("2- %s\n",buf);
-    printf("2- %d\n",strlen(buf));
-
+    
     int i = 0, flag = 0,number=0,sum=0,count=0;
+    printf("0- %d\n",sum);
     while (buf[i])
     {
         switch (in_number(flag, buf[i]))
@@ -44,6 +41,7 @@ int getSum(char buf[])
             number = char_in_int(buf[i]);
             flag = 1;
             count++;
+                printf("1- %d\n",sum);
             break;
         case 2:
             number = number * 10 + char_in_int(buf[i]);
@@ -55,19 +53,21 @@ int getSum(char buf[])
                 sum +=number;
                 number = 0;
             }
+                printf("2- %d\n",sum);
             break;
         case 3:
             sum += number;
             number = 0;
             flag = 0;
+                printf("3- %d\n",sum);
             break;
         }
         i++;
     }
-    printf("%d", sum);
+    
     if (flag==1)
         sum += number;
-    printf("%d", sum);
+    
     
     return sum;
 }
