@@ -27,6 +27,9 @@ int char_in_int(char ch1)
 
 int getSum(char buf[])
 {
+    printf("%s\n",buf);
+    printf("%d\n",strlen(buf));
+    
     if (buf[strlen(buf) - 1] == '\n')
         buf[strlen(buf) - 1] = '\0';
 
