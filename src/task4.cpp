@@ -31,7 +31,7 @@ int getSum(char buf[])
         buf[strlen(buf) - 1] = '\0';
 
     int i = 0, flag = 0,number=0,sum=0,count=0;
-    while (i<strlen(buf))
+    while (buf[i])
     {
         switch (in_number(flag, buf[i]))
         {
@@ -59,7 +59,7 @@ int getSum(char buf[])
         }
         i++;
     }
-    if (flag==1 && i == strlen(buf))
+    if (flag==1)
         sum += number;
     
     return sum;
