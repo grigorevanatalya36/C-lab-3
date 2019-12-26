@@ -31,8 +31,8 @@ int getMaxWord(char buf[], char word[])
 			{
 				maxWord = count;
 				p = buf + i - maxWord;
-				count = 0;
 			}
+			count = 0;  // if exit of word count = 0 always
 		}
 	}
 
