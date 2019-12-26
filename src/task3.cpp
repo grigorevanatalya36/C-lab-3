@@ -27,7 +27,7 @@ int getMaxWord(char buf[], char word[])
 		else if (buf[i] == ' ' && inWord == 1)   //exit of word
 		{
 			inWord = 0;
-			if (maxWord < count)
+			if (maxWord <= count)
 			{
 				maxWord = count;
 				p = buf + i - maxWord;
