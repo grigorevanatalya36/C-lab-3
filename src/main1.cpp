@@ -11,6 +11,7 @@ int main() {
 	if (str[strlen(str) - 1] == '\n')
 		str[strlen(str) - 1] = 0;
 
+	//char str[BUF] = "   abc    f efg h12   9827398798";
 	int count = 0;
 	count = wordCount(str);
 	printf("Количество слов - %d\n", count);

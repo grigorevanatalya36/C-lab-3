@@ -1,5 +1,7 @@
 #include "task1.h"
 
+#define printf //
+
 int wordCount(char buf[]) {
 
 	int i = 0, inWord = 0, count = 0;
@@ -12,9 +14,13 @@ int wordCount(char buf[]) {
 			inWord = 0;
 			count++;
 		}
-
 		i++;
 	}
+
+	if(inWord == 1) {
+		count++;
+	}
+	printf("count = %d\n", count);
 
 	return count;
 }
