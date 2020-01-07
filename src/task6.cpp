@@ -2,7 +2,7 @@
 void generateAndFind(int arr[], int N, int* minPos, int* maxPos)
 {
     srand(time(0));
-    int min = INT_MAX, max = INT_MIN;
+    int min = 10000000, max = -10000000;
     for (int i = 0; i < N; i++)
     {
         arr[i] = rand() % 1000;
