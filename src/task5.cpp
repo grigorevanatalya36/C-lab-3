@@ -31,7 +31,7 @@ int getSumInt(int arr[], int N)
 		}
 
 	else if (negative > positive)
-		for (int k = (positive + 1); k > negative; k++)
+		for (int k = (positive + 1); k < negative; k++)
 		{
 			sum = sum + arr[k];
 		}
