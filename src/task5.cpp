@@ -6,7 +6,7 @@ int getSumInt(int arr[], int N)
 {
 	int negative = 0, positive = 0, sum = 0;
 
-	for (int i = 0; i <= N; i++)
+	for (int i = 0; i < N; i++)
 	{
 		if (arr[i] < 0)
 		{
@@ -15,7 +15,7 @@ int getSumInt(int arr[], int N)
 		} 
 	}
 
-	for (int j = N; j >= 0; j--)
+	for (int j = N-1; j >= 0; j--)
 	{
 		if (arr[j] >= 0)
 		{
