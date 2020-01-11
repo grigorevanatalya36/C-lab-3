@@ -3,7 +3,9 @@
 #define SIZE 10
 int main5()
 {
-    int arr[SIZE];
+    srand(time(NULL));
+    int arr[SIZE] = { 1,-2,3,-4,-6,2,3 };
+    //generate(arr, SIZE);
     int sum=getSumInt(arr, SIZE);
     for (int i = 0; i < SIZE; i++)
     {

@@ -6,7 +6,7 @@ struct Symbol
     char symbol;
     int freq=0;
 };
-int main()
+int main7()
 {
     char buf[SIZE];
     fgets(buf, SIZE, stdin);
@@ -33,5 +33,5 @@ int main()
     for (int i = 0; i < 128; i++)
         if(arr[i].freq>0)
             printf("%c %d\n", arr[i].symbol, arr[i].freq);
-
+    return 0;
 }

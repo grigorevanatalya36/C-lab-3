@@ -1,5 +1,5 @@
 #include "task6.h"
-void generateAndFind(int arr[], int N, int* minPos, int* maxPos)
+void generateArr(int arr[], int N)
 {
     srand(time(0));
     int min = 10000000, max = -10000000;
@@ -8,30 +8,32 @@ void generateAndFind(int arr[], int N, int* minPos, int* maxPos)
         arr[i] = rand() % 1000;
         if (rand() % 2)
             arr[i] = -arr[i];
-        if (arr[i] < min)
-        {
-            min = arr[i];
-            *minPos = i;
-        }
-        if (arr[i] > max)
-        {
-            max = arr[i];
-            *maxPos = i;
-        }
     }
 }
 int getSumMaxMin(int arr[], int N)
 {
-    int first, second;
-    generateAndFind(arr, N, &first, &second);  
-    if (first > second)
+    int first=1000000, second=-100000,firstPos=0,secondPos=0;
+    for (int i = 0; i < N; i++)
     {
-        int tmp = second;
-        second = first;
-        first = tmp;
+        if (arr[i] < first)
+        {
+            first = arr[i];
+            firstPos = i;
+        }
+        if (arr[i] > second)
+        {
+            second = arr[i];
+            secondPos = i;
+        }
+    }
+    if (firstPos > secondPos)
+    {
+        int tmp = secondPos;
+        secondPos = firstPos;
+        firstPos = tmp;
     }
     int sum = 0;
-    for (int i = first + 1; i < second; i++)
+    for (int i = firstPos + 1; i < secondPos; i++)
     {
         sum += arr[i];
     }

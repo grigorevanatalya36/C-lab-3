@@ -1,26 +1,30 @@
 #include "task3.h"
 int getMaxWord(char buf[], char word[])
 {
-    int len = 0;
+    int stringLen = strlen(buf);
     int maxLen = 0;
     int maxPos = 0;
-    for (int i = 0; buf[i + 1] != '\0'; i++)
+    int len = 0;
+    for (int i = 0; i<=stringLen; i++)
     {
-        if (buf[i] != ' ')
+        if (buf[i] != ' '&&buf[i]!='\n'&&buf[i]!='\0')
         {
             len++;
         }
-        if ((buf[i] != ' ') && (buf[i + 1] == ' ' || buf[i + 1] == '\n' || buf[i + 1] == '\0'))
+        else
         {
             if (maxLen < len)
             {
                 maxLen = len;
-                maxPos = i+1-maxLen;
+                maxPos = i-len;   
             }
             len = 0;
         }
     }
-    strncpy(word, &buf[maxPos], maxLen);
+    for (int i = 0; i < maxLen; i++)
+    {
+        word[i] = buf[maxPos + i];
+    }
     word[maxLen] = '\0';
     return maxLen;
 }

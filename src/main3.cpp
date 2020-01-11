@@ -6,7 +6,7 @@ int main3()
 {
     char buf[SIZE];
     fgets( buf,SIZE,stdin);
-    char word[10];
+    char word[20];
     int len = getMaxWord(buf, word);
     printf("%s : %d", word, len);
     return 0;
