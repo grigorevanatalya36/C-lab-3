@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "task1.h"
-int main1()
+int main()
 {
     const int SIZE = 50;
     char buf[SIZE];

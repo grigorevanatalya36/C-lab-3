@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "task4.h"
 #define SIZE 50
-int main4()
+int main()
 {
     char buf[SIZE];
     fgets(buf, SIZE, stdin);

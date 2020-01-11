@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "task5.h"
 #define SIZE 10
-int main5()
+int main()
 {
     srand(time(NULL));
     int arr[SIZE] = { 1,-2,3,-4,-6,2,3 };

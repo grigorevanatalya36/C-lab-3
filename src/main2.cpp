@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #define SIZE 50
-int main2()
+int main()
 {
     char buf[SIZE];
     int count = 0;

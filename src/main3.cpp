@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "task3.h"
 #define SIZE 50
-int main3()
+int main()
 {
     char buf[SIZE];
     fgets( buf,SIZE,stdin);

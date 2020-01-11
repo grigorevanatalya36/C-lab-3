@@ -6,7 +6,7 @@ struct Symbol
     char symbol;
     int freq=0;
 };
-int main7()
+int main()
 {
     char buf[SIZE];
     fgets(buf, SIZE, stdin);
