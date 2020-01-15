@@ -6,13 +6,13 @@ int getSumInt(int arr[], int N)
 {
 	int n, m;
 	int sum = 0;
-	srand(time(NULL));
-	for (int i = 0; i < 10; i++)
-	{
-		arr[i] = rand() % 30 - 5;
-		printf("%3d", arr[i]);
-	}
-	printf("\n");
+	//srand(time(NULL));
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	arr[i] = rand() % 30 - 5;
+	//	printf("%3d", arr[i]);
+	//}
+	//printf("\n");
 	n = -1;
 	for (int i = 0; i < 10; i++)
 	{
@@ -34,7 +34,7 @@ int getSumInt(int arr[], int N)
 	}
 
 	if (n == -1)
-		return printf("íåò îòğèöàòåëüíûõ\n");
+		return printf("Ğ½ĞµÑ‚ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ñ…\n");
 	else
 	{
 		
