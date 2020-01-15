@@ -6,7 +6,14 @@
 
 int main()
 {
-	int arr[N];
+	int arr[N] = { 0 };
+	srand(time(NULL));
+	for (int i = 0; i < 10; i++)
+	{
+		arr[i] = rand() % 30 - 5;
+		printf("%3d", arr[i]);
+	}
+	printf("\n");
 	printf("Summa: %d\n", getSumInt(arr, N));
 	
 	return 0;
