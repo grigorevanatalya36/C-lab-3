@@ -4,18 +4,17 @@
 
 int getMaxWord(char buf[], char word[])
 {
-	int linelength = strlen(buf) - 2;
 	int imax = 0;
 	int MaxWord = 0;
 	
-	for (int i = 0; i <= linelength; i++)
+	for (int i = 0; buf[i] != '\0'; i++)
 	{
 		int length = 0;
-		while ((buf[i] == ' ') && (i <= linelength))
+		while ((buf[i] == ' ') && (buf[i] != '\0'))
 		{
 			i++;
 		}
-		while ((buf[i] != ' ') && (i <= linelength))
+		while ((buf[i] != ' ') && (buf[i] != '\0'))
 		{
 			i++;
 			length++;
@@ -26,12 +25,13 @@ int getMaxWord(char buf[], char word[])
 			imax = i - length;
 		}
 	}
-
+	int length = 0;
 	for (int i = 0; i < MaxWord; i++)
 	{
 		word[i] = buf[imax + i];
+		length++;
 	}
 	word[MaxWord] = '\0';
 
-	return MaxWord;
+	return length;
 }
