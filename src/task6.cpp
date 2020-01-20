@@ -28,7 +28,7 @@ int getSumMaxMin(int arr[],int N)
        Max = tmp;
    }
    
-   for(int i = Min;i<Max;i++)
+   for(int i = Min+1;i<Max;i++)
       sum+=arr[i];
    return sum;
 }
