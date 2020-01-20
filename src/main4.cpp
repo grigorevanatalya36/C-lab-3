@@ -1,4 +1,4 @@
-#include "task4"
+#include "task4.h"
 #include<stdio.h>
 #include<string.h>
 #define N 256
