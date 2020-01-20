@@ -1,1 +1,0 @@
-int wordCount(char buf[]);
