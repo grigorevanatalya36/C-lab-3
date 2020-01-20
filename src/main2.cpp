@@ -9,7 +9,7 @@ int main(void)
    puts("enter the line!");
    fgets(buf,N,stdin);
    if(buf[strlen(buf)-1]=='\0')
-      buf[strlen(buf)-1]=0'
+      buf[strlen(buf)-1]=0;
    while(buf[i])
    {
       if(buf[i]!=' ' && flag==0)
