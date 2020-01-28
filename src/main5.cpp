@@ -14,7 +14,7 @@ int main()
     
     for (int x = 0; x < N; x++)
     {
-        switch ( rand() %2 )
+        switch (rand() % 2)
         {
            case 0:
           {
@@ -23,12 +23,12 @@ int main()
           }
            case 1:
            {
-               data[x] = rand() % 100 * -1;
+               data[x] = rand() % 100 * - 1;
                break;
            }
         }
     }
-    
+   
     printf("Your summa is: %d ", getSumInt(data, N));
 
 

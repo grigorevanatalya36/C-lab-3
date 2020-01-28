@@ -3,7 +3,7 @@
 
 int getSumInt(int arr[], int N)
 {
-    int sum = 0, otr = 0, plus = N;
+    int sum = 0, otr = 0, plus = N - 1;
 
     while (arr[otr++] > 0); //  ищем первое отрицательное число
     
