@@ -21,8 +21,7 @@ int getMaxWord(char buf[], char word[])
 
         else if (buf[i] != ' ' && inWord == 1) // считаем и выводим символы в слове 
         {
-            count++;
-            
+            count++;  
         }
         else if (buf[i] == ' ' && inWord == 1) // выход их слова и обнуляем счетчик слова
         {
@@ -38,15 +37,15 @@ int getMaxWord(char buf[], char word[])
             if (max <= count)
             {
                 max = count;
-                start = i - count;
+                start = i - count + 1;
             }
-
         i++;
     }
     int w = 0; 
 
-    for (i = start; i < max + start; i++, w++) //записываем саммое длинное слово
+    for (i = start; i <= max + start; i++, w++) //записываем саммое длинное слово
         word[w] = buf[i];
+        word[--w] = '\0';
 
     return max;
 }
