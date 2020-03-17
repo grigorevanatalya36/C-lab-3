@@ -8,42 +8,17 @@ int main()
 {
 	srand(time(0));	
 	printf("enter size:\n");
-	int n=0;
-	scanf("%d", &n);
+	int N=0;
+	scanf("%d", &N);
 	printf("*****\n");
 	int arr[100]={0};
-	for (int i=0; i<n; i++)
-		arr[i]=rand()%21-10;
-	for (int i=0; i<n; i++)
+	for (int i=0; i<N; i++)
+		arr[i]=rand()%201-100;
+	for (int i=0; i<N; i++)
 		printf("%d - %d\n", i, arr[i]);
-	int max =-10;
-	int min=10;
-	int indmax=0;
-	int indmin=0;
-	for (int i=0; i<n; i++)
-	{
-		if(arr[i]>max)
-		{
-			max=arr[i];
-			indmax=i;
-		}
 
-		if (arr[i]<min)
-		{
-			min=arr[i];
-			indmin=i;
-		}
-	}
-	printf("max %d, min %d\n", indmax, indmin);
-	int sum =0;
-
-	if (indmin<indmax)
-		for (int i=indmin+1; i<indmax; i++)
-			sum=sum+arr[i];
-	if (indmin>indmax)
-		for (int i=indmax+1; i<indmin; i++)
-			sum=sum+arr[i];
-	printf("sum=%d\n", sum);
+	printf("sum=%d\n", getSumMaxMin(arr,N));
+	
 
 	return 0;
 }
